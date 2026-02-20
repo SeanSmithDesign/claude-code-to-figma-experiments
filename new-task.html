@@ -4,34 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif; background-color: #ffffff; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 40px; }
     .phone-frame { width: 433px; height: 892px; background-color: #1c1c1e; border-radius: 52px; padding: 12px; position: relative; border: 2px solid #3a3a3c; }
-    .phone-screen { width: 100%; height: 100%; background-color: #f8fafc; border-radius: 42px; overflow: hidden; display: flex; flex-direction: column; position: relative; }
+    .phone-screen { width: 100%; height: 100%; background-color: #ffffff; border-radius: 42px; overflow: hidden; display: flex; flex-direction: column; position: relative; }
     .dynamic-island { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 120px; height: 34px; background-color: #000000; border-radius: 20px; z-index: 20; }
-    .status-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px 8px; flex-shrink: 0; height: 54px; background-color: #ffffff; }
-    .time { font-size: 15px; font-weight: 600; color: #0f172a; }
-    .status-icons { display: flex; gap: 6px; align-items: center; font-size: 12px; font-weight: 600; color: #0f172a; letter-spacing: 0.5px; }
-    .home-indicator { width: 134px; height: 5px; background-color: #0f172a; border-radius: 3px; margin: 6px auto 8px; opacity: 0.18; flex-shrink: 0; }
+    .status-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px 8px; flex-shrink: 0; height: 54px; background-color: #0000FF; }
+    .time { font-size: 15px; font-weight: 600; color: #ffffff; }
+    .status-icons { display: flex; gap: 6px; align-items: center; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.5px; }
+    .home-indicator { width: 134px; height: 5px; background-color: #1a1a2e; border-radius: 3px; margin: 6px auto 8px; opacity: 0.18; flex-shrink: 0; }
     .bottom-spacer { height: 28px; flex-shrink: 0; }
 
-    .topbar { display: flex; align-items: center; justify-content: space-between; padding: 4px 24px 12px; flex-shrink: 0; background-color: #ffffff; border-bottom: 1px solid #f1f5f9; }
-    .cancel { font-size: 15px; color: #94a3b8; font-weight: 500; }
-    .topbar-title { font-size: 17px; font-weight: 600; color: #0f172a; }
-    .create-btn { font-size: 15px; color: #0d9488; font-weight: 600; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; padding: 4px 24px 12px; flex-shrink: 0; background-color: #0000FF; }
+    .cancel { font-size: 15px; color: #aaaaff; font-weight: 500; }
+    .topbar-title { font-family: "Honk", system-ui; font-weight: 400; font-variation-settings: "MORF" 15, "SHLN" 50; font-size: 20px; color: #ffffff; }
+    .create-btn { font-size: 15px; color: #BFFF00; font-weight: 700; }
     .form { flex: 1; background-color: #ffffff; }
-    .field-title { padding: 20px 24px; border-bottom: 1px solid #e2e8f0; }
-    .field-title input { width: 100%; border: none; outline: none; font-size: 18px; font-weight: 500; color: #0f172a; font-family: inherit; background-color: transparent; }
-    .field-title input::placeholder { color: #94a3b8; }
+    .field-title { padding: 20px 24px; border-bottom: 2px solid #e2e8f0; }
+    .field-title input { width: 100%; border: none; outline: none; font-size: 20px; font-weight: 600; color: #1a1a2e; font-family: inherit; background-color: transparent; }
+    .field-title input::placeholder { color: #6b7280; }
     .field-desc { padding: 16px 24px; border-bottom: 1px solid #f1f5f9; }
-    .field-desc textarea { width: 100%; border: none; outline: none; font-size: 15px; color: #64748b; font-family: inherit; resize: none; min-height: 48px; line-height: 1.6; background-color: transparent; }
-    .field-desc textarea::placeholder { color: #94a3b8; }
+    .field-desc textarea { width: 100%; border: none; outline: none; font-size: 15px; color: #6b7280; font-family: inherit; resize: none; min-height: 48px; line-height: 1.6; background-color: transparent; }
+    .field-desc textarea::placeholder { color: #6b7280; }
     .quick-actions { display: flex; gap: 16px; padding: 16px 24px; border-bottom: 1px solid #f1f5f9; }
-    .action-btn { width: 44px; height: 44px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #64748b; }
-    .action-btn.active { border-color: #0d9488; background-color: #ccfbf1; color: #0d9488; }
-    .text-action { padding: 16px 24px; border-bottom: 1px solid #f1f5f9; font-size: 15px; font-weight: 500; color: #0d9488; }
+    .action-btn { width: 48px; height: 48px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #6b7280; }
+    .action-btn.active { border-color: #0000FF; border-width: 2px; background-color: #eeeeff; color: #0000FF; }
+    .text-action { padding: 16px 24px; border-bottom: 1px solid #f1f5f9; font-size: 15px; font-weight: 600; color: #0000FF; }
   </style>
 </head>
 <body>

@@ -4,16 +4,16 @@ Mobile app mockups generated with Claude Code and pushed to Figma via the [HTML-
 
 ## Design
 
-Apple/Notion-inspired aesthetic with a near-monochrome slate palette and a single teal accent (#0d9488). Designed for clarity, generous whitespace, and weight-based typographic hierarchy.
+Gen Z / Bump-inspired aesthetic with electric blue (`#0000FF`), neon lime (`#BFFF00`), and hot pink (`#FF69B4`) accents. Uses the **Honk** variable font from Google Fonts for playful display text, paired with system fonts for body content. Designed for maximum energy with bubble-shaped cards and bold neon status rings.
 
 ## Screens
 
 | File | Screen | Description |
 |------|--------|-------------|
-| `login.html` | Login | OAuth-first (Google/GitHub) with collapsible email option |
-| `task-list.html` | Task List | Date greeting, priority dots, filter pills, FAB, bottom nav |
-| `task-detail.html` | Task Detail | Status dots, compact metadata grid, subtasks, comments link |
-| `new-task.html` | New Task | Progressive disclosure form with quick-action icons |
+| `login.html` | Login | OAuth-first (Google/GitHub) with pill-shaped buttons, neon-rimmed logo |
+| `task-list.html` | Task List | Blue header zone, Honk greeting, neon card rings by status, FAB, blue bottom nav |
+| `task-detail.html` | Task Detail | Blue topbar, pink/yellow status dots, neon lime progress bar, Honk meta labels |
+| `new-task.html` | New Task | Blue topbar with Honk title, neon lime create button, electric blue actions |
 
 ## Usage
 
@@ -48,15 +48,28 @@ See [`docs/solutions/integration-issues/figma-mcp-overflow-scroll-height.md`](do
 
 | Token | Hex | Usage |
 |-------|-----|-------|
-| Accent | `#0d9488` | Interactive elements (teal-600) |
-| Accent subtle | `#ccfbf1` | Accent backgrounds (teal-100) |
-| Text primary | `#0f172a` | Headings, primary content |
-| Text secondary | `#64748b` | Body text, descriptions |
-| Text tertiary | `#94a3b8` | Metadata, timestamps |
-| Border | `#e2e8f0` | Hairline borders |
-| Border strong | `#cbd5e1` | Card outlines |
+| Electric Blue | `#0000FF` | Headers, nav bar, primary accent, links on white |
+| Neon Lime | `#BFFF00` | Done/success, avatar rings, FAB, progress fill, checkboxes |
+| Hot Pink | `#FF69B4` | Urgent states, overdue text, attention |
+| Yellow | `#FFE500` | In-progress, warnings, callout pills |
+| White | `#FFFFFF` | Content backgrounds, text on blue |
+| Dark Text | `#1a1a2e` | Primary text on white backgrounds |
+| Muted Text | `#6b7280` | Secondary/meta text on white |
+| Muted Nav | `#8888FF` | Inactive nav items on blue background |
 
-Type scale (minor third): 11, 13, 15, 18, 22, 26px.
+### Typography
+
+- **Honk** (Google Fonts, variable: MORF 15, SHLN 50): brand logo, screen titles, filter pills, status tags, section labels, nav labels
+- **System font** (-apple-system / SF Pro): card titles, body text, descriptions, metadata values
+
+### Card Status Ring Colors
+
+| Status | Border Color |
+|--------|-------------|
+| Urgent | `#FF69B4` (hot pink) |
+| In-progress | `#FFE500` (yellow) |
+| Done | `#BFFF00` (neon lime) |
+| Normal | `#0000FF` (electric blue) |
 
 ## Phone Frame Template
 
@@ -74,4 +87,4 @@ Phone frame: 433x892px, 12px padding
 2. Keep the phone frame shell (everything outside the screen content area)
 3. Replace the content area with your screen's UI
 4. Verify total content height stays within the ~795px budget
-5. Use `#0d9488` for accent color, max 3 accent elements per screen
+5. Use the color palette above — status rings determine card border color
