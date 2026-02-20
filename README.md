@@ -4,16 +4,16 @@ Mobile app mockups generated with Claude Code and pushed to Figma via the [HTML-
 
 ## Design
 
-Apple/Notion-inspired aesthetic with a near-monochrome slate palette and a single teal accent (#0d9488). Designed for clarity, generous whitespace, and weight-based typographic hierarchy.
+Bold, vibrant aesthetic with a violet/blue/orange palette. Designed for visual impact with heavy typographic weight (800 display), 4px colored card borders as a signature element, and gradient accents.
 
 ## Screens
 
 | File | Screen | Description |
 |------|--------|-------------|
-| `login.html` | Login | OAuth-first (Google/GitHub) with collapsible email option |
-| `task-list.html` | Task List | Date greeting, priority dots, filter pills, FAB, bottom nav |
-| `task-detail.html` | Task Detail | Status dots, compact metadata grid, subtasks, comments link |
-| `new-task.html` | New Task | Progressive disclosure form with quick-action icons |
+| `login.html` | Login | OAuth-first (Google/GitHub), violet branding, weight-800 heading |
+| `task-list.html` | Task List | Date greeting, 4px colored left borders, gradient FAB, filled filter pills |
+| `task-detail.html` | Task Detail | Violet progress bar (6px), bold metadata grid, violet checkboxes |
+| `new-task.html` | New Task | Progressive disclosure form, violet action icons, bold Create CTA |
 
 ## Usage
 
@@ -48,15 +48,19 @@ See [`docs/solutions/integration-issues/figma-mcp-overflow-scroll-height.md`](do
 
 | Token | Hex | Usage |
 |-------|-----|-------|
-| Accent | `#0d9488` | Interactive elements (teal-600) |
-| Accent subtle | `#ccfbf1` | Accent backgrounds (teal-100) |
+| Primary | `#7c3aed` | Interactive elements, branding (violet) |
+| Secondary | `#2563eb` | Supporting accents (electric blue) |
+| Accent | `#f97316` | Urgent/attention states (orange) |
+| Success | `#10b981` | Completed states (emerald) |
+| Danger | `#ef4444` | Errors, overdue (red) |
+| Primary subtle | `#ede9fe` | Accent backgrounds (violet-100) |
 | Text primary | `#0f172a` | Headings, primary content |
-| Text secondary | `#64748b` | Body text, descriptions |
+| Text secondary | `#475569` | Body text, descriptions |
 | Text tertiary | `#94a3b8` | Metadata, timestamps |
 | Border | `#e2e8f0` | Hairline borders |
 | Border strong | `#cbd5e1` | Card outlines |
 
-Type scale (minor third): 11, 13, 15, 18, 22, 26px.
+Type scale (perfect fourth): 11, 13, 15, 18, 21, 28px. Display weight: 800.
 
 ## Phone Frame Template
 
@@ -74,4 +78,4 @@ Phone frame: 433x892px, 12px padding
 2. Keep the phone frame shell (everything outside the screen content area)
 3. Replace the content area with your screen's UI
 4. Verify total content height stays within the ~795px budget
-5. Use `#0d9488` for accent color, max 3 accent elements per screen
+5. Use `#7c3aed` (violet) as primary accent, `#2563eb` (blue) and `#f97316` (orange) as supporting colors
