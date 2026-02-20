@@ -22,11 +22,10 @@ Describe, generate, screenshot, refine. 4 screens, 3 completely different aesthe
 
 ## Tweet 3
 
-Custom Claude Code skills made the iteration loop repeatable:
+I've also been building custom Claude Code skills to make the iteration loop repeatable:
 
 /design-brief to set style constraints before coding
 /design-review to score the output after
-/workflows:compound to document learnings
 
 Now I'm packaging these into a compound engineering plugin to make the whole flow shareable.
 
