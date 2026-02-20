@@ -29,3 +29,28 @@
 - The "Code to Canvas" feature was announced by Figma on Feb 17, 2026
 - Twitter thread was posted, drafting process included extracting real prompts from session transcripts
 - Three aesthetic branches now exist: apple-notion-redesign, bold-redesign, genz-redesign
+
+---
+
+## 2026-02-20 | Screenshots & Final Thread Links
+
+### Summary
+
+Finished the commit from the previous session — copied 21 Code to Canvas screenshots into the repo and committed the pending twitter thread edits with image annotations and real Figma/GitHub links.
+
+### Features Implemented
+
+- Copied 21 PNG screenshots into `docs/images/` covering flow prompts, design skill redesigns, MCP connection test, and session captures
+- Twitter thread draft finalized with image annotations per tweet and real links (Figma file + GitHub repo)
+
+### New Files Created
+
+- `docs/images/*.png` — 21 screenshots (~5MB total)
+
+### Commits
+
+- `7a6e9dd` docs: Add Code to Canvas screenshots and finalize twitter thread links
+
+### Notes
+
+- macOS Unicode normalization (NFD vs NFC) caused `ls` to fail on the source folder path despite `find` locating it — resolved by using `find` output as a shell variable
